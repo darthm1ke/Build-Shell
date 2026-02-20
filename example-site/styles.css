@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: #1d242b;
+  background: linear-gradient(180deg, #f4f6f8, #e7ecf2);
+}
+
+.site-header,
+.hero,
+.features,
+.site-footer {
+  width: min(980px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 2rem 0 1.2rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.site-header p {
+  margin-top: 0.5rem;
+  color: #4f5f6f;
+}
+
+.hero {
+  border: 1px solid #d0d8e2;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.3rem;
+}
+
+.hero h2 {
+  margin: 0;
+}
+
+.hero p {
+  color: #516171;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 0.6rem;
+  text-decoration: none;
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  background: #1f6c67;
+  color: #ffffff;
+}
+
+.features {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.features article {
+  background: #ffffff;
+  border: 1px solid #d0d8e2;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.features h3 {
+  margin: 0;
+}
+
+.features p {
+  margin-top: 0.5rem;
+  color: #536475;
+}
+
+.site-footer {
+  padding: 1.5rem 0 2rem;
+  color: #5b6b7c;
+}
+
+@media (max-width: 760px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}

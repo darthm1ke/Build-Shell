@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build Shell</title>
+    <link rel="stylesheet" href="/plugin/assets/shell.css" />
+  </head>
+  <body>
+    <main class="shell-screen">
+      <div id="build-canvas" class="build-canvas"></div>
+
+      <section id="build-float" class="build-float">
+        <p class="badge">Deploy Shell</p>
+        <h1>Your site is being built right now</h1>
+        <p id="phase-copy">Waiting for commit replay.</p>
+        <p id="commit-copy" class="commit-copy"></p>
+      </section>
+
+      <section class="shell-hud">
+        <span id="phase-pill" class="phase-pill phase-idle">idle</span>
+        <ul id="activity-list"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="/plugin/assets/shell.js"></script>
+  </body>
+</html>

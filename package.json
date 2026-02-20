@@ -1,0 +1,15 @@
+{
+  "name": "ai-site-builder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Server plugin that replays commits as a live site build for clients and PM visibility",
+  "scripts": {
+    "dev": "node --watch server/index.mjs",
+    "start": "node server/index.mjs"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-html-parser": "^7.0.1"
+  }
+}
