@@ -94,7 +94,7 @@ async function processQueue() {
     setPhase('replaying')
     pushEvent('run', run)
 
-    const totalDelay = run.steps.reduce((sum, step) => sum + step.delayMs, 0)
+    const totalDelay = run.steps.reduce((sum, step) => sum + (step.estimatedMs || step.delayMs || 0), 0)
     await wait(totalDelay + 650)
 
     setPhase('ready')

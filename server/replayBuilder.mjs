@@ -41,19 +41,26 @@ function readStylesheets(document) {
 
 function toElementStep(node, index) {
   const rawText = (node.textContent || '').replace(/\s+/g, ' ').trim()
-  const text = rawText.slice(0, 240)
+  const previewText = rawText.slice(0, 120)
   const classes = node.getAttribute('class') || ''
   const id = node.getAttribute('id') || ''
   const targetTag = node.tagName.toLowerCase()
-  const stepDelay = 420 + index * 80
+  const imageCount = node.querySelectorAll('img').length
+  const delayMs = 260 + index * 60
+  const typingMs = Math.min(3400, rawText.length * 8)
+  const imageMs = imageCount * 1500
+  const estimatedMs = delayMs + typingMs + imageMs
 
   return {
     id: `step-${index + 1}`,
     tag: targetTag,
     idAttr: id,
     classAttr: classes,
-    text,
-    delayMs: stepDelay,
+    previewText,
+    html: node.toString(),
+    imageCount,
+    delayMs,
+    estimatedMs,
   }
 }
 
@@ -91,16 +98,16 @@ export async function createReplayRun({ payload, siteEntryPath }) {
 export function createDemoPayload() {
   return {
     ref: 'refs/heads/main',
-    repository: { full_name: 'demo/AI-Site-Builder' },
+    repository: { full_name: 'demo/Web-Build-Shell' },
     pusher: { name: 'demo-dev' },
     head_commit: {
       id: '1af64ff9c22fa09bcf61120c0b4ca49dc11e9ed1',
-      message: 'Update layout and stream text fill animation',
+      message: 'Expand shell demo with richer sections and dialup image streaming',
     },
     commits: [
       {
         id: '1af64ff9c22fa09bcf61120c0b4ca49dc11e9ed1',
-        message: 'Update layout and stream text fill animation',
+        message: 'Expand shell demo with richer sections and dialup image streaming',
         added: [],
         modified: ['index.html', 'styles.css'],
         removed: [],

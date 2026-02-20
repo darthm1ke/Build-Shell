@@ -8,33 +8,121 @@
   </head>
   <body>
     <header class="site-header">
-      <h1>Atlas Studio</h1>
-      <p>Design systems for small product teams.</p>
+      <h1>Northline Product Studio</h1>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <section class="hero">
-      <h2>Shipped in days, not weeks</h2>
-      <p>Reusable sections, shared tokens, and guided component recipes for your roadmap.</p>
-      <a href="#">Book a call</a>
+    <section class="hero" id="work">
+      <div>
+        <h2>Launch faster with a delivery stack your clients can follow live</h2>
+        <p>Each commit lands as a visual replay so stakeholders can watch a page take shape from shell to final layout.</p>
+      </div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1024px-Node.js_logo.svg.png"
+        alt="Node runtime"
+      />
     </section>
 
-    <section class="features">
+    <section class="summary-list" id="services">
+      <h3>Delivery checklist</h3>
+      <ul>
+        <li>Scope review and milestone mapping</li>
+        <li>Commit replay feed for every sprint demo</li>
+        <li>Weekly QA snapshots for client signoff</li>
+      </ul>
+    </section>
+
+    <section class="stats-table">
+      <h3>Sprint tracking table</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Sprint</th>
+            <th>Tickets</th>
+            <th>Delivered</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>24.4</td>
+            <td>18</td>
+            <td>16</td>
+            <td>On track</td>
+          </tr>
+          <tr>
+            <td>24.5</td>
+            <td>22</td>
+            <td>20</td>
+            <td>Reviewing</td>
+          </tr>
+          <tr>
+            <td>24.6</td>
+            <td>14</td>
+            <td>11</td>
+            <td>Active</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="feature-grid">
       <article>
-        <h3>Clear scope</h3>
-        <p>Weekly delivery plans tied to your product goals.</p>
+        <h3>Progress lanes</h3>
+        <p>Each build event appears with its own timeline and page replay.</p>
       </article>
       <article>
-        <h3>Live feedback</h3>
-        <p>Stakeholder comments get folded into the next commit cycle.</p>
+        <h3>Client safe mode</h3>
+        <p>Keep unfinished pages hidden behind a controlled shell screen.</p>
       </article>
       <article>
-        <h3>Stable handoff</h3>
-        <p>Engineers get source ready components and tokens.</p>
+        <h3>Team check-ins</h3>
+        <p>Project managers can track design and engineering movement in one place.</p>
       </article>
     </section>
 
-    <footer class="site-footer">
-      <p>hello@atlas.studio</p>
+    <section class="gallery-strip">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/640px-PNG_transparency_demonstration_1.png"
+        alt="Gallery sample one"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/640px-Fronalpstock_big.jpg"
+        alt="Gallery sample two"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Oia_Santorini_Greece.jpg/640px-Oia_Santorini_Greece.jpg"
+        alt="Gallery sample three"
+      />
+    </section>
+
+    <section class="timeline-cascade">
+      <h3>Build stream timeline</h3>
+      <ol>
+        <li>Commit received and queued</li>
+        <li>Server build pipeline runs</li>
+        <li>Shell playback starts top to bottom</li>
+        <li>Final site marks ready for handoff</li>
+      </ol>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <h3>Client update request</h3>
+      <form>
+        <label>
+          Name
+          <input type="text" placeholder="Jane Doe" />
+        </label>
+        <label>
+          Next revision notes
+          <textarea placeholder="Add one image gallery section and update the pricing table"></textarea>
+        </label>
+        <button type="button">Send update</button>
+      </form>
     </footer>
   </body>
 </html>

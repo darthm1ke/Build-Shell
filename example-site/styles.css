@@ -1,87 +1,230 @@
 body {
   margin: 0;
   font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
-  color: #1d242b;
-  background: linear-gradient(180deg, #f4f6f8, #e7ecf2);
+  color: #1e2932;
+  background: linear-gradient(180deg, #f4f7fb, #e9f0f7);
 }
 
 .site-header,
 .hero,
-.features,
+.summary-list,
+.stats-table,
+.feature-grid,
+.gallery-strip,
+.timeline-cascade,
 .site-footer {
-  width: min(980px, calc(100% - 2rem));
+  width: min(1080px, calc(100% - 2rem));
   margin: 0 auto;
 }
 
 .site-header {
-  padding: 2rem 0 1.2rem;
+  padding: 1.5rem 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .site-header h1 {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
 }
 
-.site-header p {
-  margin-top: 0.5rem;
-  color: #4f5f6f;
+.site-header nav {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: #27586a;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #c7d8e7;
+  background: #ffffff;
 }
 
 .hero {
-  border: 1px solid #d0d8e2;
+  border: 1px solid #d2deeb;
+  border-radius: 16px;
   background: #ffffff;
-  border-radius: 14px;
-  padding: 1.3rem;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  align-items: center;
 }
 
 .hero h2 {
   margin: 0;
+  font-size: clamp(1.4rem, 2.9vw, 2.2rem);
 }
 
 .hero p {
-  color: #516171;
+  margin: 0.65rem 0 0;
+  color: #4f6371;
 }
 
-.hero a {
-  display: inline-block;
-  margin-top: 0.6rem;
-  text-decoration: none;
-  padding: 0.65rem 0.9rem;
-  border-radius: 10px;
-  background: #1f6c67;
-  color: #ffffff;
+.hero img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #cfdbe8;
+  object-fit: cover;
 }
 
-.features {
-  margin-top: 1rem;
+.summary-list {
+  margin-top: 0.9rem;
+  border: 1px solid #d2deeb;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 1rem 1.2rem;
+}
+
+.summary-list h3,
+.stats-table h3,
+.timeline-cascade h3,
+.site-footer h3 {
+  margin: 0;
+}
+
+.summary-list ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.stats-table {
+  margin-top: 0.9rem;
+  border: 1px solid #d2deeb;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  margin-top: 0.7rem;
+  border-collapse: collapse;
+  background: #fdfefe;
+}
+
+th,
+td {
+  padding: 0.6rem;
+  border: 1px solid #d5e0ec;
+  text-align: left;
+}
+
+th {
+  background: #eaf1f9;
+}
+
+.feature-grid {
+  margin-top: 0.9rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
-.features article {
+.feature-grid article {
   background: #ffffff;
-  border: 1px solid #d0d8e2;
+  border: 1px solid #d2deeb;
   border-radius: 12px;
   padding: 1rem;
 }
 
-.features h3 {
+.feature-grid h3 {
   margin: 0;
 }
 
-.features p {
-  margin-top: 0.5rem;
-  color: #536475;
+.feature-grid p {
+  margin-top: 0.55rem;
+  color: #526576;
+}
+
+.gallery-strip {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.gallery-strip img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #d2deeb;
+  background: #dce7f2;
+}
+
+.timeline-cascade {
+  margin-top: 0.9rem;
+  border: 1px solid #d2deeb;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.timeline-cascade ol {
+  margin: 0.7rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.4rem;
 }
 
 .site-footer {
-  padding: 1.5rem 0 2rem;
-  color: #5b6b7c;
+  margin-top: 0.9rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #d2deeb;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 1rem;
 }
 
-@media (max-width: 760px) {
-  .features {
+.site-footer form {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.site-footer label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.site-footer input,
+.site-footer textarea {
+  border: 1px solid #c7d5e5;
+  border-radius: 9px;
+  padding: 0.55rem 0.65rem;
+  font: inherit;
+}
+
+.site-footer textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+
+.site-footer button {
+  width: fit-content;
+  border: none;
+  border-radius: 10px;
+  background: #1f6c67;
+  color: #ffffff;
+  padding: 0.6rem 0.95rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid,
+  .gallery-strip {
     grid-template-columns: 1fr;
   }
 }
