@@ -1,4 +1,4 @@
-# AI-Site-Builder
+# Build-Shell
 
 Plugin style build shell for static sites behind Apache2 or Nginx.
 
@@ -26,6 +26,19 @@ Trigger a demo replay:
 ```bash
 curl -X POST http://localhost:8787/plugin/demo
 ```
+
+The demo site now includes eight common page elements so the replay is easier to evaluate:
+
+- Header with nav links
+- Hero with headline and image
+- Checklist list section
+- Data table section
+- Feature card grid
+- Three image gallery strip
+- Timeline list section
+- Footer with form controls
+
+Images in the shell replay use a simulated dialup scanline load effect before they resolve.
 
 ## GitHub webhook
 

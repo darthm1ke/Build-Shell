@@ -98,7 +98,7 @@ export async function createReplayRun({ payload, siteEntryPath }) {
 export function createDemoPayload() {
   return {
     ref: 'refs/heads/main',
-    repository: { full_name: 'demo/Web-Build-Shell' },
+    repository: { full_name: 'demo/Build-Shell' },
     pusher: { name: 'demo-dev' },
     head_commit: {
       id: '1af64ff9c22fa09bcf61120c0b4ca49dc11e9ed1',
