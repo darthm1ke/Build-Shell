@@ -6,6 +6,10 @@ When a push event arrives, the app switches to a build shell page, replays block
 
 This is meant for teams who want a client friendly progress view during delivery. Instead of a hard refresh from old page to new page, clients can watch the page shape itself commit by commit. The same stream can also be used by project managers who want a visual checkpoint of progress.
 
+## Project showcase
+
+![Build-Shell project demo](https://mikeurbizo.com/github-project-4.gif)
+
 ## Why teams use it
 
 - Show live progress to clients during demos
